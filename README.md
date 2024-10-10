@@ -55,17 +55,29 @@ This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="
      npx sst deploy --stage dev
      ```
 
-5. **Invoke the API**:
+5. **Invoke the API and Test**:
 
    - Use the API endpoints displayed in the deployment output to send messages to the SQS queue.
+   - Create a large payload
+     ```bash
+     # This creates 396KB of random characters
+     head -c 300000 /dev/urandom | base64 > large-payload.json
+     ```
    - You can use `curl` to interact with the API endpoints:
      ```bash
-     # This endpoint does not work for messages larger than 256KB
-     curl <API_ENDPOINT>/standard
+     # Smaller messages than 256KB works for both endpoints
+
+     curl -X POST <API_ENDPOINT>/standard -d '{"message": "small payload"}' -H "Content-Type: application/json"
+
+     curl -X POST <API_ENDPOINT>/extended-client -d '{"message": "small payload"}' -H "Content-Type: application/json"
      ```
      ```bash
-     # This endpoint works for messages larger than 256KB
-     curl <API_ENDPOINT>/extended-client
+     # Messages larger than 256KB only wiorks for /extended-client
+     # Do not forget to create the large-paylogad.json in the steps above.
+     
+     curl -X POST <API_ENDPOINT>/extended-client d @large-payload.json -H "Content-Type: application/json"
+
+     # E.g curl -X POST https://459asc5vwk.execute-api.us-east-1.amazonaws.com/extended-client -d @large-payload.json -H "Content-Type: application/json"
      ```
 
    - **Note**:
