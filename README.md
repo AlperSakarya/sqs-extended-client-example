@@ -1,4 +1,4 @@
-# SQS Extended Client Example
+# SQS Extended Client Node.js Example
 
 ![Project Image](repo-static-assets/SQS-Extended-Client.drawio.png)
 <small><em>Logos in the screenshot belongs to their trademark owners</em></small>
