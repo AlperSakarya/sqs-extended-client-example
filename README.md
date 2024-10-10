@@ -6,7 +6,8 @@
 ## Overview
 
 This project demonstrates the use of AWS SQS with extended client capabilities to handle large payloads. It leverages AWS services such as SQS, Lambda, and API Gateway, and is built using the <a href="https://sst.dev" target="_blank">SST v3</a> (Serverless Stack Toolkit).  
-This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="_blank">Node.js implementation</a>. AWS released this only for Java and Python and does not have a Node.js example.
+This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="_blank">Node.js implementation</a>. 
+#### AWS released this client only for Java and Python and does not have a Node.js example.
 
 
 ## Features
@@ -75,22 +76,11 @@ This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="
 ## Code Structure
 
 - **`sst.config.ts`**: Configures the SST app, setting up the SQS queue, S3 bucket, and API Gateway.
-  ```typescript:sst.config.ts
-  startLine: 1
-  endLine: 59
-  ```
 
 - **`lambda-functions/standard-lambda/index.js`**: Handles sending messages using the standard SQS client.
-  ```javascript:lambda-functions/standard-lambda/index.js
-  startLine: 1
-  endLine: 35
-  ```
 
 - **`lambda-functions/extended-client-lambda/index.js`**: Handles sending large messages using the SQS Extended Client.
-  ```javascript:lambda-functions/extended-client-lambda/index.js
-  startLine: 1
-  endLine: 43
-  ```
+
 
 ## Dependencies
 
