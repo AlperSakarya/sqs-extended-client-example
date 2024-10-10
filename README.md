@@ -7,7 +7,7 @@
 
 This project demonstrates the use of AWS SQS with extended client capabilities to handle large payloads. It leverages AWS services such as SQS, Lambda, and API Gateway, and is built using the <a href="https://sst.dev" target="_blank">SST v3</a> (Serverless Stack Toolkit).  
 This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="_blank">Node.js implementation</a>. 
-#### AWS released this client only for Java and Python and does not have a Node.js example.
+#### AWS has officially released this client only for Java and Python. This is the unofficial Node.js implementation.
 
 
 ## Features
