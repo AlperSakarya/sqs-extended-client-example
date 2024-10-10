@@ -54,6 +54,7 @@ This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="
      ```bash
      npx sst deploy --stage dev
      ```
+     <em>when you are cleaning up change "deploy" to "remove"</em>
 
 5. **Invoke the API and Test**:
 
