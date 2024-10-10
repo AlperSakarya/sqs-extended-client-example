@@ -34,7 +34,7 @@ This is the <a href="https://www.npmjs.com/package/sqs-extended-client" target="
 
    - Clone the repository:
      ```bash
-     git clone <repository-url>
+     git clone https://github.com/AlperSakarya/sqs-extended-client-example
      ```
    - Navigate into the project directory:
      ```bash
