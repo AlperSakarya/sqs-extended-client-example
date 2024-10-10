@@ -1,0 +1,21 @@
+{
+  "name": "sqs-extended-client-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.9.0",
+    "@aws-sdk/client-sqs": "^3.667.0",
+    "sqs-extended-client": "^1.0.0",
+    "sst": "3.1.73"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.145"
+  }
+}
